@@ -1,0 +1,18 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sync": "browser-sync start --server --https --directory --files 'style.css, **/*.html, !node_modules/**/*.html'",
+   "sass": "node-sass --watch sass --output . --source-map true --source-map-embed true",
+   "build": "npm-run-all --parallel sass sync"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.5.1"
+  }
+}
